@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sign up form</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div id="background-image-container">
+        <div class="logo-container">
+          <img
+            src="https://cdn.statically.io/gh/TheOdinProject/curriculum/5f37d43908ef92499e95a9b90fc3cc291a95014c/html_css/project-sign-up-form/odin-lined.png"
+            class="logo"
+          />
+          <h1>ODIN</h1>
+        </div>
+      </div>
+      <div id="main-container">
+        <div class="intro">
+          <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.</p>
+          <p>Sign up <em>now</em> to get started.</p>
+          <p style="margin-top: 30px">You <em>know</em> you want to.</p>
+        </div>
+        <div class="form-container">
+          <form class="form" onsubmit="return false;">
+            <div class="cell-container">
+              <p>Lets do this!</p>
+              <div class="form-cell">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first-name" required />
+              </div>
+              <div class="form-cell">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last-name" required />
+              </div>
+              <div class="form-cell">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" required />
+                <div class="invalid"></div>
+              </div>
+              <div class="form-cell">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" required />
+                <div class="invalid"></div>
+              </div>
+              <div class="form-cell">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required />
+              </div>
+              <div class="form-cell">
+                <label for="confirm-password">Confirm password</label>
+                <input type="password" id="confirm-password" name="confirm-password" required />
+                <div class="invalid"></div>
+              </div>
+            </div>
+            <div id="button-div">
+              <button type="submit" class="submit-button">Create Account</button>
+            </div>
+          </form>
+        </div>
+        <div class="login">Already have an account? <a href="#">Log in</a></div>
+      </div>
+    </div>
+  </body>
+</html>

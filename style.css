@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+@font-face {
+  font-family: "Norse-Bold";
+  src: url("/images/Norse-Bold.otf") format("opentype");
+  font-weight: Bold;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+:root {
+  font-family: "Roboto", sans-serif;
+  --container-color: rgba(249, 250, 251, 255);
+  --body-color: rgba(14, 14, 14, 255);
+  --button-color: rgb(96, 108, 76);
+}
+
+body {
+  background-color: var(--body-color);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.wrapper {
+  overflow: hidden;
+  border-radius: 24px;
+  display: flex;
+  flex-flow: row wrap;
+  height: 1024px;
+  width: 1440px;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 150px;
+  position: relative;
+  top: 200px;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-family: Norse-Bold;
+  font-size: 3rem;
+  flex-flow: row wrap;
+}
+
+img {
+  height: 95%;
+}
+
+#background-image-container {
+  width: 38%;
+  background-image: url(https://images.unsplash.com/photo-1585202900225-6d3ac20a6962?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#main-container {
+  background-color: var(--container-color);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.intro {
+  overflow: hidden;
+  height: 35%;
+  padding: 160px 100px 20px 40px;
+  font-size: max(1rem, 1vw);
+  font-weight: 700;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 30%;
+}
+
+form {
+  width: 100%;
+}
+
+.cell-container {
+  padding-left: 40px;
+  padding-top: 24px;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  background-color: white;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 16px;
+  box-shadow: 0 8px 9px -8px black;
+}
+
+.cell-container > p {
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.form-cell {
+  min-width: 40%;
+}
+
+label {
+  text-transform: uppercase;
+  display: block;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  margin-bottom: 4px;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid #000000;
+  padding-bottom: 2px;
+  width: 90%;
+}
+
+input:focus {
+  outline: none;
+  border-bottom: 2px solid #2418cf;
+}
+
+#button-div {
+  padding-left: 40px;
+}
+
+button {
+  background-color: var(--button-color);
+  color: white;
+  height: 54px;
+  width: 240px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 8px;
+  border: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.login {
+  padding-left: 40px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+a {
+  color: var(--button-color);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.invalid {
+  color: red;
+}
+
+@media only screen and (max-width: 600px) {
+  .wrapper {
+    flex-flow: column;
+    min-height: 100vh;
+    height: auto;
+    text-align: center;
+  }
+
+  #background-image-container {
+    width: 100vw;
+    display: flex;
+    /*height: 20vh;*/
+    justify-content: center;
+    height: auto;
+  }
+
+  .logo-container {
+    position: static;
+    height: 20vh;
+    width: 100%;
+  }
+
+  .intro {
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+  }
+
+  .cell-container {
+    padding-left: 0;
+    flex-direction: column;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  .form-cell {
+    min-width: 90%;
+  }
+
+  #button-div,
+  .login {
+    padding-left: 0;
+  }
+}
